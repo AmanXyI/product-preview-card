@@ -12,28 +12,32 @@ body{
     box-sizing: border-box;
     font-family: var(--main-font);
 }
-
 .container{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.preview-card{
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     align-items: center;
-    margin: 20px 20px;
+    /* margin:50px 0 0 20px ; */
     border-radius: 10px;
     background-color: white;
-    height: 150vw;
-    width: 90vw;
+    height: 700px;
+    width: 85vw;
 }
 .image img{
-    width: 100%;
+    width: 85vw;
     border-radius: 10px 10px 0 0;
 }
 .head{
     width: 300px;
 }
 .head-label{
-    font-size: .6em;
+    font-size: .8em;
     font-family:var(--main-font);
     letter-spacing: 4.8px;
     text-transform:uppercase;
@@ -42,11 +46,11 @@ body{
 }
 .head-name{
     font-family: var(--header-font);
-    font-size: 1.66em;
+    font-size: 2.1em;
     margin: -15px 0 0 0;
 }
 .product-info{
-    font-size: .73em;
+    font-size: .9em;
     font-weight: 300;
     letter-spacing: .3px;
     opacity: 85%;
@@ -60,28 +64,29 @@ body{
 }
 
 .price{
-
     display: flex;
-    margin: -20px 0 0 -120px ;
+    align-items: center;
+    gap: 20px;
 }
 .descounted-price{
     font-family: var(--header-font);
     color:  hsl(158, 36%, 37%);;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 .actual-price{
-    font-size: .73em;
+    font-size: .9em;
     text-decoration:line-through;
     opacity: 70%;
 }
 .add-cart{
     width: 300px;
-    height: 45px;
-    border-radius: 5px;
+    height: 55px;
+    border-radius:10px;
     border: none;
     background-color:  hsl(158, 36%, 37%);
     color: white;
-    font-weight: 550;
+    font-weight: 400;
+    font-size: 1em;
 
 }
 .add-cart img{
@@ -90,4 +95,40 @@ body{
 }
 
 
+@media screen and (min-width:540px) {
+    
+    .preview-card{
+        flex-direction: row;
+        height: 400px;
+        width: 600px;
+        border-radius: 10px;
+    }
 
+    .image{
+        border-radius: 10px 0 0 10px ;
+        width:300px;
+        height: 400px;
+        background:url(/images/image-product-desktop.jpg) no-repeat;
+        background-size: contain;
+
+    } 
+    .head-name{
+        width: 250px;
+    }
+    .product-info{
+        width: 250px;;
+    }
+    .image img{
+        opacity: 0%;
+    }
+    .price{
+        margin: -20px 0 0 0;
+    }
+    .card{
+        width: 200px;
+    }
+    .add-cart{
+        width: 260px;
+        height: 50px;
+    }
+}
