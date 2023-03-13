@@ -111,7 +111,7 @@ body{
         border-radius: 10px 0 0 10px ;
         width:330px;
         height: 430px;
-        background:url(/images/image-product-desktop.jpg) no-repeat;
+        background:url(../images/image-product-desktop.jpg) no-repeat;
         background-size: contain;
 
     } 
@@ -139,5 +139,8 @@ body{
     .add-cart:hover{
         cursor: pointer;
         background-color: #1a4031;
+    }
+    .add-cart:active{
+        background-color: hsl(158, 36%, 37%);
     }
 }
